@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Especialidades{% endblock %}
+
+{% block content %}
+    <h2>Lista de Especialidades</h2>
+    <a href="{% url 'cadastrar_especialidade' %}">Nova Especialidade</a>
+    <ul>
+        {% for especialidade in especialidades %}
+            <li>
+                {{ especialidade.nome }}
+                <a href="#">Editar</a> |
+                <a href="#">Deletar</a>
+            </li>
+        {% empty %}
+            <li>Nenhuma especialidade cadastrada.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

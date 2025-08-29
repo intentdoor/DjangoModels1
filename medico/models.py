@@ -14,3 +14,5 @@ class Medico(models.Model):
 
     def __str__(self):
         return f"{self.nome} - {self.crm}"
+
+## Arthur Américo Marques

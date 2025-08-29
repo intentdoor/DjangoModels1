@@ -19,4 +19,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('especialidades/', listar_especialidades, name='listar_especialidades'),
 ]
+
+
