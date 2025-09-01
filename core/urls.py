@@ -16,10 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from medico.views import listar_especialidades , cadastrar_especialidade , listar_medicos , cadastrar_medico
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('especialidades/', listar_especialidades, name='listar_especialidades'),
+    path('medicos/', listar_medicos, name='listar_medicos'),
+    path('medicos/cadastrar/', cadastrar_medico, name='cadastrar_medico'),
+    path('especialidades/cadastrar/', cadastrar_especialidade, name='cadastrar_especialidade'),
 ]
 
 
